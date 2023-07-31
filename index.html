@@ -34,10 +34,16 @@
 
   const COMMANDS = new Map([
     [
-      'b',
+      'j',
       {
-        name: 'Dribbble',
-        url: 'https://dribbble.com/shots/popular',
+        name: 'JIRA',
+        searchTemplate: '/browse/{}',
+        suggestions: [
+          'LRCI-12345',
+          'LPS-12345',
+          'LRQA-12345'
+        ],
+        url: 'https://liferay.atlassian.net/jira',
       },
     ],
     [

@@ -1,0 +1,13 @@
+:root {
+	--color-background: #{$color-gray-dark-1};
+	--color-text-subtle: #{$color-gray-dark-3};
+	--color-text: #{$color-gray-light-1};
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+	--color-background: #{$color-gray-light-1};
+	--color-text-subtle: #{$color-gray-dark-2};
+	--color-text: #{$color-gray-dark-1};
+  }
+}

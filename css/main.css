@@ -1,0 +1,10 @@
+:root {
+  --color-background: #111111;
+  --color-text-subtle: #999999;
+  --color-text: #eeeeee; }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: #eeeeee;
+    --color-text-subtle: #777777;
+    --color-text: #111111; } }

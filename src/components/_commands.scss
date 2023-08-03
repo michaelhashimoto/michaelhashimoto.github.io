@@ -31,12 +31,12 @@
 	color: var(--color-text);
 }
 
-	@media (min-width: 500px) {
+@media (min-width: 500px) {
 	.commands {
 		columns: 2;
 		max-width: 20rem;
 	}
-	}
+}
 
 @media (min-width: 800px) {
 	.commands {

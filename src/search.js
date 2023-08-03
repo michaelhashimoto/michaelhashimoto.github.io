@@ -1,6 +1,70 @@
 import { COMMANDS, CONFIG } from './constants.js';
 
-class Search extends HTMLElement {
+import React, { Component, useEffect, useRef } from 'react';
+
+
+class Search extends Component {
+
+	render() {
+		return (
+			<SearchContainer />
+		);
+	}
+
+}
+
+const SearchContainer = () => {
+
+	const handleGlobalKeyDown = (event) => {
+		console.log(event);
+	};
+
+	const handleFormSubmit = (event) => {
+		console.log(event);
+	};
+
+	const handleInput = (event) => {
+		console.log(event);
+	};
+
+	const handleClickSuggestions = (event) => {
+		console.log(event);
+	};
+
+	return (
+		<>
+			<GlobalEventHandler eventMethod={handleGlobalKeyDown} eventType="keydown" />
+
+			<section className="search-container">
+				<dialog className="dialog">
+					<form autoComplete="off" className="form" method="dialog" spellCheck="false" onSubmit={handleFormSubmit}>
+						<input className="input" title="search" type="text" onInput={handleInput} />
+						<menu className="suggestions" onClick={handleClickSuggestions}></menu>
+					</form>
+				</dialog>
+			</section>
+		</>
+	);
+
+}
+
+const GlobalEventHandler = ({ eventMethod, eventType }) => {
+	useEffect(() => {
+		function eventListener(event) {
+			eventMethod(event);
+		}
+
+		document.addEventListener(eventType, eventListener);
+
+		return () => {
+			document.removeEventListener(eventType, eventListener);
+		}
+	}, []);
+
+	return <></>;
+};
+
+class SearchElement extends HTMLElement {
 	#dialog;
 	#form;
 	#input;
@@ -243,6 +307,5 @@ class Search extends HTMLElement {
 		}
 	}
 }
-
 
 export default Search;

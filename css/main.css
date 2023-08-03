@@ -2,10 +2,12 @@ html {
   background-color: var(--color-background);
   font-family: var(--font-family);
   font-size: var(--font-size-base);
-  line-height: var(--line-height-base); }
+  line-height: var(--line-height-base);
+}
 
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 main {
   align-items: center;
@@ -16,7 +18,8 @@ main {
   overflow: hidden;
   padding: var(--space-3) var(--space-2);
   position: relative;
-  width: 100vw; }
+  width: 100vw;
+}
 
 :root {
   --color-background: #111111;
@@ -32,52 +35,61 @@ main {
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 4rem;
-  --transition-speed: 200ms; }
+  --transition-speed: 200ms;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
     --color-background: #eeeeee;
     --color-text-subtle: #777777;
-    --color-text: #111111; } }
-
+    --color-text: #111111;
+  }
+}
 .commands {
   columns: 1;
   list-style: none;
   margin: 0 auto;
   max-width: 10rem;
   padding: 0 0 0 var(--space-1);
-  width: 100vw; }
+  width: 100vw;
+}
 
 .command {
   display: flex;
   gap: var(--space-2);
   outline: 0;
   padding: var(--space-1);
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .key {
   color: var(--color-text);
   display: inline-block;
   text-align: center;
-  width: 3ch; }
+  width: 3ch;
+}
 
 .name {
   color: var(--color-text-subtle);
-  transition: color var(--transition-speed); }
+  transition: color var(--transition-speed);
+}
 
 .command:where(:focus, :hover) .name {
-  color: var(--color-text); }
+  color: var(--color-text);
+}
 
 @media (min-width: 500px) {
   .commands {
     columns: 2;
-    max-width: 20rem; } }
-
+    max-width: 20rem;
+  }
+}
 @media (min-width: 800px) {
   .commands {
     columns: 4;
-    max-width: 40rem; } }
-
+    max-width: 40rem;
+  }
+}
 input,
 button {
   -moz-appearance: none;
@@ -85,7 +97,8 @@ button {
   background: transparent;
   border: 0;
   display: block;
-  outline: 0; }
+  outline: 0;
+}
 
 .dialog {
   align-items: center;
@@ -98,13 +111,16 @@ button {
   left: 0;
   padding: 0;
   top: 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .dialog[open] {
-  display: flex; }
+  display: flex;
+}
 
 .form {
-  width: 100%; }
+  width: 100%;
+}
 
 .input {
   color: var(--color-text);
@@ -112,7 +128,8 @@ button {
   font-weight: var(--font-weight-bold);
   padding: 0;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+}
 
 .suggestions {
   align-items: center;
@@ -123,7 +140,8 @@ button {
   list-style: none;
   margin: var(--space-2) 0 0;
   overflow: hidden;
-  padding: 0; }
+  padding: 0;
+}
 
 .suggestion {
   color: var(--color-text);
@@ -133,15 +151,17 @@ button {
   position: relative;
   transition: color var(--transition-speed);
   white-space: nowrap;
-  z-index: 1; }
+  z-index: 1;
+}
 
 .suggestion:where(:focus, :hover) {
-  color: var(--color-background); }
+  color: var(--color-background);
+}
 
 .suggestion::before {
   background-color: var(--color-text);
   bottom: var(--space-2);
-  content: ' ';
+  content: " ";
   left: var(--space-2);
   opacity: 0;
   position: absolute;
@@ -149,19 +169,27 @@ button {
   top: var(--space-2);
   transform: translateY(0.5em);
   transition: all var(--transition-speed);
-  z-index: -1; }
+  z-index: -1;
+}
 
 .suggestion:where(:focus, :hover)::before {
   opacity: 1;
-  transform: translateY(0); }
+  transform: translateY(0);
+}
 
 .match {
   color: var(--color-text-subtle);
-  transition: color var(--transition-speed); }
+  transition: color var(--transition-speed);
+}
 
 .suggestion:where(:focus, :hover) .match {
-  color: var(--color-background); }
+  color: var(--color-background);
+}
 
 @media (min-width: 700px) {
   .suggestions {
-    flex-direction: row; } }
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

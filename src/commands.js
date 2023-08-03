@@ -1,27 +1,49 @@
 import { COMMANDS, CONFIG } from './constants.js';
 
-class Commands extends HTMLElement {
-	constructor() {
-		super();
-		this.attachShadow({ mode: 'open' });
-		const template = document.getElementById('commands-template');
-		const clone = template.content.cloneNode(true);
-		const commands = clone.querySelector('.commands');
-		const commandTemplate = document.getElementById('command-template');
+import React, { Component } from 'react';
 
-		for (const [key, { name, url }] of COMMANDS.entries()) {
-			if (!name || !url) continue;
-			const clone = commandTemplate.content.cloneNode(true);
-			const command = clone.querySelector('.command');
-			command.href = url;
-			if (CONFIG.openLinksInNewTab) command.target = '_blank';
-			clone.querySelector('.key').innerText = key;
-			clone.querySelector('.name').innerText = name;
-			commands.append(clone);
+class Commands extends Component {
+
+	render() {
+		return (
+			<CommandsElement />
+		);
+	}
+
+}
+
+const CommandsElement = () => {
+	const commands = [];
+
+	for (const [key, { name, url }] of COMMANDS.entries()) {
+		if (!name || !url) {
+			continue;
 		}
 
-		this.shadowRoot.append(clone);
+		commands.push(CommandElement(key, name, url));
 	}
-}
+
+	return (<nav>
+		<menu className="commands">
+			{commands.map((component, index) => (
+				<div key={index}>{component}</div>
+			))}
+		</menu>
+	</nav>);
+};
+
+const CommandElement = (key, name, url) => {
+	return (<li>
+		<a
+			className="command"
+			href={url ? url : '#'}
+			rel="noopener noreferrer"
+			target={CONFIG.openLinksInNewTab ? '_blank' : '_self'}
+		>
+			<span className="key">{key}</span>
+			<span className="name">{name}</span>
+		</a>
+	</li>);
+};
 
 export default Commands;

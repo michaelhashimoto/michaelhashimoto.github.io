@@ -148,7 +148,7 @@ export const COMMANDS = new Map([
 		{
 		name: 'local',
 		searchTemplate: ':{}',
-		suggestions: ['0 54323', '0 54324'],
+		suggestions: ['0 8080', '0 8161', '0 8081', '0 8082'],
 		url: 'http://localhost:3000',
 		},
 	],

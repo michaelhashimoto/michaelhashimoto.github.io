@@ -67,6 +67,20 @@
       },
     ],
     [
+      'gp',
+      {
+        name: 'GitHub Pulls',
+        url: 'https://github.com/pulls',
+        searchTemplate: '?q=is:pr+is:open+user:{}'
+        suggestions: [
+          'brianchandotcom',
+          'kenjiheigel',
+          'michaelhashimoto',
+          'pyoo47'
+        ]
+      },
+    ],
+    [
       'i',
       {
         name: 'Discord',
@@ -158,8 +172,13 @@
       {
         name: 'local',
         searchTemplate: ':{}',
-        suggestions: ['0 8080', '0 8161', '0 8081', '0 8082', '0 8083', '0 8084'],
-        url: 'http://localhost:3000',
+        suggestions: [
+          '0 8080',
+          '0 8161',
+          '0 8081',
+          '0 8082'
+        ],
+        url: 'http://localhost',
       },
     ],
   ]);

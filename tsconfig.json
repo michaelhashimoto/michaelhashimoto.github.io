@@ -17,5 +17,5 @@
 		"useDefineForClassFields": false,
 		"emitDeclarationOnly": false
 	},
-	"include": ["./src/**/*"]
+	"include": ["./docs/**/*"]
 }

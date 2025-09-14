@@ -6,10 +6,10 @@ export default defineConfig(
 			postcss: './postcss.config.js'
 		},
 		build: {
-			outDir: './src/generated',
+			outDir: './docs/generated',
 			rollupOptions: {
 				input: {
-					main: './src/js/main.ts',
+					main: './docs/js/main.ts',
 				},
 				output: {
 					entryFileNames: '[name].js',

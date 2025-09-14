@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"license": "ISC",
 	"type": "module",
-	"main": "src/js/index.ts",
+	"main": "docs/js/index.ts",
 	"scripts": {
 		"build": "vite build",
 		"watch": "vite build --watch"

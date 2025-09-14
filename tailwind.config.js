@@ -1,6 +1,6 @@
 export default {
 	content: [
-		"./src/**/*.html",
-		"./src/js/**/*.ts",
+		"./docs/**/*.html",
+		"./docs/js/**/*.ts",
 	]
 }

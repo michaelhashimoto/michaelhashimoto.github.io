@@ -4,6 +4,6 @@
 	themes: pastel --default, synthwave --prefersdark, cupcake, lofi, light, dark, forest, retro, cyberpunk, garden, emerald;
 }
 
-@utility btn {
+@utility btn-transition {
 	@apply transform transition-transform duration-200 ease-in-out hover:-translate-y-0.5;
 }
